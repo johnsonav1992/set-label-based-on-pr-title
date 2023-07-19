@@ -24,18 +24,13 @@ try {
 
   const labelsToAdd = [];
   
-  console.log(prTitleLowerCase)
   words.forEach((word, index) => {
-    const testRegex = new RegExp(`\\b${word.toLowerCase()}\\b`, 'i');
-    console.log(word.toLowerCase())
-    console.log(testRegex.test(prTitleLowerCase))
-    if (testRegex.test(prTitleLowerCase)) {
-      console.log('label TO ADD', labels[index])
+    const regex = new RegExp(`\\b${word.toLowerCase()}\\b`, 'i');
+
+    if (regex.test(prTitleLowerCase)) {
       labelsToAdd.push(labels[index]);
     }
   });
-
-  console.log(labelsToAdd, 'labels to add')
 
   if (labelsToAdd.length > 0) {
     octokit.issues
