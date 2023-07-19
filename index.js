@@ -28,11 +28,13 @@ try {
     console.log(words)
     console.log(prTitleLowerCase)
     const testRegex = new RegExp(`\\b${word}\\b`, 'gi');
-    console.log(testRegex.test('testing - LEAN'))
+    console.log(word, testRegex.test('testing - LEAN'))
     if (testRegex.test(prTitleLowerCase)) {
       labelsToAdd.push(labels[index]);
     }
   });
+
+  console.log(labelsToAdd, 'labels to add')
 
   if (labelsToAdd.length > 0) {
     octokit.issues
