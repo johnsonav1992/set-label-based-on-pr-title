@@ -23,12 +23,12 @@ try {
   const octokit = new github.GitHub(repoToken);
 
   const labelsToAdd = [];
-
+  
+  console.log(prTitleLowerCase)
   words.forEach((word, index) => {
-    console.log(words, labels)
-    console.log(prTitleLowerCase)
     const testRegex = new RegExp(`\\b${word.toLowerCase()}\\b`, 'gi');
-    console.log(word, testRegex.test(prTitleLowerCase))
+    console.log(word.toLowerCase())
+    console.log(testRegex.test(prTitleLowerCase))
     if (testRegex.test(prTitleLowerCase)) {
       console.log('label TO ADD', labels[index])
       labelsToAdd.push(labels[index]);
