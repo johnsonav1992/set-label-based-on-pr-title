@@ -26,6 +26,7 @@ try {
 
   words.forEach((word, index) => {
     console.log(words)
+    console.log(prTitleLowerCase)
     if (prTitleLowerCase.includes(word.toLowerCase())) {
       labelsToAdd.push(labels[index]);
     }
