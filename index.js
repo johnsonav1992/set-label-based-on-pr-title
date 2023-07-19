@@ -26,8 +26,7 @@ try {
   
   console.log(prTitleLowerCase)
   words.forEach((word, index) => {
-    const testRegex = new RegExp(`\\b${word.toLowerCase()}\\b`, 'gi');
-    testRegex.lastIndex = 0
+    const testRegex = new RegExp(`\\b${word.toLowerCase()}\\b`, 'i');
     console.log(word.toLowerCase())
     console.log(testRegex.test(prTitleLowerCase))
     if (testRegex.test(prTitleLowerCase)) {
