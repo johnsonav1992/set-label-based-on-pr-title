@@ -29,7 +29,7 @@ try {
     const testRegex = new RegExp(`\\b${word.toLowerCase()}\\b`, 'gi');
     console.log(word.toLowerCase())
     console.log(testRegex.test(prTitleLowerCase))
-    if (testRegex.test(prTitleLowerCase)) {
+    if (!testRegex.test(prTitleLowerCase)) {
       console.log('label TO ADD', labels[index])
       labelsToAdd.push(labels[index]);
     }
