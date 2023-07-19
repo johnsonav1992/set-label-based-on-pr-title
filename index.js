@@ -30,7 +30,8 @@ try {
     const testRegex = new RegExp(`\\b${word}\\b`, 'gi');
     console.log(word, testRegex.test(prTitle))
     if (testRegex.test(prTitle)) {
-      labelsToAdd.push(word);
+      console.log('label TO ADD', labels[index])
+      labelsToAdd.push(labels[index]);
     }
   });
 
