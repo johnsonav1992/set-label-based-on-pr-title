@@ -28,7 +28,7 @@ try {
     console.log(words)
     console.log(prTitleLowerCase)
     const testRegex = new RegExp(`\\b${word}\\b`, 'gi');
-    console.log(testRegex.test('testing - clean'))
+    console.log(testRegex.test('testing - lean'))
     if (testRegex.test(prTitleLowerCase)) {
       labelsToAdd.push(labels[index]);
     }
