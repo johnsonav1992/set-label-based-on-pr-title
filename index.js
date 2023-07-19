@@ -29,7 +29,7 @@ try {
     console.log(prTitleLowerCase)
     const testRegex = new RegExp(`\\b${word}\\b`, 'gi');
     console.log(word, testRegex.test('testing - LEAN'))
-    if (testRegex.test(prTitleLowerCase)) {
+    if (testRegex.test(prTitle)) {
       labelsToAdd.push(labels[index]);
     }
   });
