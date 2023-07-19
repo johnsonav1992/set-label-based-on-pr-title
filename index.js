@@ -27,9 +27,10 @@ try {
   console.log(prTitleLowerCase)
   words.forEach((word, index) => {
     const testRegex = new RegExp(`\\b${word.toLowerCase()}\\b`, 'gi');
+    testRegex.lastIndex = 0
     console.log(word.toLowerCase())
     console.log(testRegex.test(prTitleLowerCase))
-    if (!testRegex.test(prTitleLowerCase)) {
+    if (testRegex.test(prTitleLowerCase)) {
       console.log('label TO ADD', labels[index])
       labelsToAdd.push(labels[index]);
     }
