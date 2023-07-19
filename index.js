@@ -25,7 +25,7 @@ try {
   const labelsToAdd = [];
 
   words.forEach((word, index) => {
-    console.log(words)
+    console.log(words, labels)
     console.log(prTitleLowerCase)
     const testRegex = new RegExp(`\\b${word}\\b`, 'gi');
     console.log(word, testRegex.test(prTitle))
